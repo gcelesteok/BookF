@@ -1,0 +1,28 @@
+<section class="informacion">
+    <div class="info">
+        <img [src]="persona.imgPersona" alt="Imagen de Alejandra" class="fotografia" />
+        <div class="descripcion">
+            <h2>{{persona.nombrePersona}}</h2>
+            <h3>{{persona.puestoPersona}}</h3>
+            <h3 class="ubicacion">{{persona.ubicacionPersona}}</h3>
+
+        </div>
+
+
+    </div>
+    <div class="acerca-de-mi">
+        <div class="sobre-mi">
+            <h3>Acerca de mí</h3>
+            <button
+            type="button"
+            class="btn btn-primary"
+            routerLink="/editar-acerca-de-mi/{{persona.id}}"
+            *ngIf= "isLogged"
+            ><i class="fa-solid fa-pen"></i></button>
+            <p>{{persona.sobreMi}}</p>
+
+        </div>
+
+    </div>
+
+</section>

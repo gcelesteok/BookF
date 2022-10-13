@@ -1,0 +1,47 @@
+<section class="vmax-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Agregar proyecto</h3>
+
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="mb-3">
+                                <label for="imgProyecto" class="col-form-label">Imagen del proyecto:</label>
+                                <input  autofocus type="url" class="form-control" id="imgProyecto" name="imgProyecto" [(ngModel)]="imgProyecto"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="col-form-label">Nombre del proyecto:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre"
+                                    [(ngModel)]="nombre" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="url" class="col-form-label">Url del proyecto:</label>
+                                <input type="text" class="form-control" id="url" name="url"
+                                    [(ngModel)]="url" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="descripcionEducacion" class="col-form-label">Descripción del
+                                    proyecto:</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion"
+                                    [(ngModel)]="descripcion" required></textarea>
+                            </div>
+
+
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                            <br>
+                            <a href="/">Volver</a>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

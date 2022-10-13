@@ -1,0 +1,31 @@
+<section class="contenedor" >
+      
+    <div class="titulo-contenedor">
+        <h2>Educación</h2>
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/nueva-edu"
+          *ngIf= "isLogged"
+        ><i class="fa-solid fa-plus"></i></button>
+
+    </div>
+    <div class="descripcion-contenedor" *ngFor="let educacion of educaciones" >
+        <img [src]="educacion.imagenE" alt="Argentina programa">
+        <div class="detalle-contenedor">
+            <h3>{{educacion.institucion}}</h3>  
+            <h4>{{educacion.nombreEducacion}}</h4>
+            <p>{{educacion.descripcionEducacion}}</p>
+        
+        </div>
+        <div class="iconos-edicion">
+            <i class="fa-solid fa-pen" routerLink="/editar-edu/{{educacion.id}}" *ngIf="isLogged" ></i>
+            
+            <i class="fa-solid fa-eraser" *ngIf="isLogged"(click)="delete(educacion.id)"></i>
+            
+        </div>
+
+    </div> 
+
+
+</section>

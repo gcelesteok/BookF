@@ -1,0 +1,28 @@
+<section class="contenedor" >
+    <div class="titulo-contenedor">
+        <h2>Proyectos</h2>
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/nuevo-proyecto"
+          *ngIf="isLogged"
+        ><i class="fa-solid fa-plus" ></i></button>
+
+    </div>
+    <div class="descripcion-contenedor" *ngFor="let proyecto of proyectos">
+        <img [src]="proyecto.imgProyecto" alt="foto proyecto 1">
+        <div class="detalle-contenedor">
+            <h3><a [href]="proyecto.url" target="_blank">{{proyecto.nombre}}</a></h3>
+            <p>{{proyecto.descripcion}}</p>
+            
+        </div>
+        <div class="iconos-edicion">
+            <i class="fa-solid fa-pen" routerLink="/editar-proyecto/{{proyecto.id}}" *ngIf="isLogged" ></i>
+            
+            <i class="fa-solid fa-eraser" (click)="delete(proyecto.id)" *ngIf="isLogged"></i>
+        </div>
+
+    </div>
+    
+
+</section>

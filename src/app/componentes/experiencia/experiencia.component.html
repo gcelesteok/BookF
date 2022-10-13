@@ -1,0 +1,31 @@
+<section class="contenedor" >
+    <div class="titulo-contenedor">
+        <h2>Experiencia</h2>
+        <button
+          type="button"
+          class="btn btn-primary"
+          routerLink="/nueva-exp"
+          *ngIf="isLogged"
+        ><i class="fa-solid fa-plus"></i></button>
+    </div>    
+    <div class="descripcion-contenedor" *ngFor ="let experiencia of experiencias">
+        <img [src]="experiencia.imgExp" alt=""/>
+        <div class="detalle-contenedor">
+            <h3>{{experiencia.nombreExperiencia}}</h3>
+            <h4 class="info-descripcion">{{experiencia.compania}}</h4>
+            <h5 class="info-descripcion">{{experiencia.startExp}}-{{experiencia.endExp}}</h5>
+            <p>{{experiencia.descripcionExperiencia}}</p>
+        </div>
+        <div class="iconos-edicion">
+            
+            <i class="fa-solid fa-pen" routerLink="/editar-exp/{{experiencia.id}}"*ngIf="isLogged" ></i>
+            
+            <i class="fa-solid fa-eraser" (click)="delete(experiencia.id)"*ngIf="isLogged"></i>
+            
+        </div>
+    </div>
+
+</section>
+
+
+

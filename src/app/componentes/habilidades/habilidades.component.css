@@ -1,0 +1,42 @@
+.contenedor {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #508bfc;
+  border-radius: 20px;
+  background-color: #ffffff80;
+  box-shadow: 0 0 20px  rgb(118, 162, 223);
+}
+
+.titulo-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.habilidades {
+
+  margin: 30px 0;
+}
+
+progress{
+  width:100%;
+}
+
+.iconos-edicion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+  
+.iconos-edicion i {
+  margin: 10px 5px;
+  align-self: flex-start;
+}
+ 
+@media (max-width: 750px) {
+  .titulo-contenedor{
+    flex-direction: column;
+    align-items: center
+  }
+}

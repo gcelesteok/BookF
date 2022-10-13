@@ -1,0 +1,50 @@
+<section class="vmax-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h3 class="mb-5">Agregar experiencia</h3>
+              
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="mb-3">
+                <label for="imgExp" class="col-form-label">Imagen:</label>
+                <input autofocus type="url" class="form-control" id="imgExp" name="imgExp" [(ngModel)]="imgExp" required/>
+              </div>
+              <div class="mb-3">
+                <label for="nombreExperiencia" class="col-form-label">Puesto:</label>
+                <input type="text" class="form-control" id="nombreExperiencia" name="nombreExperiencia" [(ngModel)]="nombreExperiencia" required/>
+              </div>
+              <div class="mb-3">
+                <label for="compania" class="col-form-label">Empresa:</label>
+                <input type="text" class="form-control" id="compania" name="compania"[(ngModel)]="compania" required/>
+              </div>
+              <div class="mb-3">
+                <label for="startExp" class="col-form-label">Año de inicio:</label>
+                <input type="number" class="form-control" id="startExp" name="startExp" [(ngModel)]="startExp" required/>
+              </div>
+              <div class="mb-3">
+                <label for="endExp" class="col-form-label">Fecha de finalización:</label>
+                <input type="text" class="form-control" id="endExp" name="endExp" [(ngModel)]="endExp" required/>
+              </div>
+              <div class="mb-3">
+                <label for="descripcionExperiencia" class="col-form-label">Descripcion del puesto:</label>
+                <textarea class="form-control" id="descripcionExperiencia" name="descripcionExperiencia" [(ngModel)]="descripcionExperiencia" required></textarea>
+              </div>
+            
+  
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+              <br>
+              <a href="/">Volver</a>
+
+
+            </form>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  

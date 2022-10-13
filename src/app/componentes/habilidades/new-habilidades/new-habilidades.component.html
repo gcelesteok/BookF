@@ -1,0 +1,34 @@
+<section class="vh-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Agregar hard/soft skill</h3>
+
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            
+                            <div class="mb-3">
+                                <label for="habilidad" class="col-form-label">Habilidad:</label>
+                                <input autofocus type="text" class="form-control" id="habilidad" name="habilidad"
+                                    [(ngModel)]="habilidad" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="alcance" class="col-form-label">Nivel/alcance:</label>
+                                <input type="number" class="form-control" id="alcance" name="alcance"
+                                    [(ngModel)]="alcance" required />
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                            <br>
+                            <a href="/">Volver</a>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

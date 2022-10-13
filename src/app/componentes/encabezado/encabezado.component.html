@@ -1,0 +1,19 @@
+<header id="cabecera">
+    <nav id="nav-bar">
+  
+        <img src="./assets/logoargentinaprograma.png" alt="logo argentina programa" class="logocabecera">
+        <ul id="menu" class="menu-barra">
+            <li><a href="mailto:{{persona.emailPersona}}" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="{{persona.githubPersona}}"target="_blank" id="cuenta-gib"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="{{persona.linkedinPersona}}" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://wa.me/+{{persona.telPersona}}?text=¡Hola+Alejandra!+estoy+interesad@+en+tus+servicios" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li *ngIf="!isLogged"><a href="/login" alt="logo inicio de sesion"><i class="fa-solid fa-circle-user iconoLogueo"></i></a></li>
+            <li *ngIf="isLogged"><i class="fa-solid fa-arrow-right-from-bracket iconoLogueo"(click)="onLogout()"></i></li>
+        </ul>
+  
+    </nav>
+    <div class="portada">
+        <h1>{{persona.nombrePersona}}</h1>
+        <h2>{{persona.puestoPersona}}</h2>
+    </div>
+</header>
