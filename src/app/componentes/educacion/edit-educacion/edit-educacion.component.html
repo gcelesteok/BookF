@@ -1,37 +1,37 @@
-<section class="vmax-100" style="background-color: #508bfc;">
+<section class="vmax-100" style="background-color: #c5c53b;">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card shadow-2-strong" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
 
-                        <h3 class="mb-5">Editar educación</h3>
+                        <h3 class="mb-5">Editar envío gratis</h3>
                         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                             <div class="mb-3">
-                                <label for="imagenE" class="col-form-label">Imagen:</label>
+                                <label for="imagenE" class="col-form-label">Foto libro:</label>
                                 <input autofocus type="url" class="form-control" id="imagenE" name="imagenE" [(ngModel)]="educacion.imagenE"
                                     required />
                             </div>
                             <div class="mb-3">
-                                <label for="nombreEducacion" class="col-form-label">Carrera:</label>
+                                <label for="nombreEducacion" class="col-form-label">Título:</label>
                                 <input type="text" class="form-control" id="nombreEducacion" name="nombreEducacion"
                                     [(ngModel)]="educacion.nombreEducacion" required />
                             </div>
                             <div class="mb-3">
-                                <label for="institucion" class="col-form-label">Institución:</label>
+                                <label for="institucion" class="col-form-label">Precio:</label>
                                 <input type="text" class="form-control" id="institucion" name="institucion"
                                     [(ngModel)]="educacion.institucion" required />
                             </div>
 
                             <div class="mb-3">
-                                <label for="descripcionEducacion" class="col-form-label">Descripción de
-                                    educación:</label>
+                                <label for="descripcionEducacion" class="col-form-label">Ficha de
+                                    libro:</label>
                                 <textarea class="form-control" id="descripcionEducación" name="descripcionEducacion"
                                     [(ngModel)]="educacion.descripcionEducacion" required></textarea>
                             </div>
 
 
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                            <button class="btn btn-dark btn-lg btn-block" type="submit">Enviar</button>
                             <br>
                             <a href="/">Volver</a>
 

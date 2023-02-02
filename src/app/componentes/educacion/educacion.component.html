@@ -1,31 +1,48 @@
-<section class="contenedor" >
-      
-    <div class="titulo-contenedor">
-        <h2>Educación</h2>
-        <button
-          type="button"
-          class="btn btn-primary"
-          routerLink="/nueva-edu"
-          *ngIf= "isLogged"
-        ><i class="fa-solid fa-plus"></i></button>
+<section class="education">
+    <div class="cotainer">
+        <div class="col-md-6 text-center">
+            <p class="text-center" id="title">¡Envío gratis! </p>
+            <button
+                type="button"
+                class="btn btn-dark"
+                routerLink="/nueva-edu"
+                *ngIf= "isLogged"
+            ><i class="fa-solid fa-plus"></i></button>
+        </div>
 
-    </div>
-    <div class="descripcion-contenedor" *ngFor="let educacion of educaciones" >
-        <img [src]="educacion.imagenE" alt="Argentina programa">
-        <div class="detalle-contenedor">
-            <h3>{{educacion.institucion}}</h3>  
-            <h4>{{educacion.nombreEducacion}}</h4>
-            <p>{{educacion.descripcionEducacion}}</p>
+        <div class="container"  *ngFor="let educacion of educaciones" >
+            <div class="col-md-10 m-6" id="certificates">
+                <div class="row justify-content-center" id="education-card">
+                    <div class="col-md-5" id="texto-exp">
+                        <p id="title" style="text-align: right;">
+                            {{educacion.nombreEducacion}}
+                        </p>
+                        <p class="desc" style="text-align: right; font-family: 'Poppins';">
+                            {{educacion.descripcionEducacion}}<br><b>
+                                {{educacion.institucion}}</b><br>
+                            <div class="card-body" style="text-align: right;">
+                                <a href="https://wa.me/+5492616297836?text=¡Hola!+estoy+en+tu+sitio+y+quiero+pedir+más+información" target="_blank" class="card-link" >
+                                    <img src="./assets/whats.svg" class="what">
+                                </a>
+                                    
+                            </div>
+                            <div class="iconos-edicion">
+                                <i class="fa-solid fa-pen" routerLink="/editar-edu/{{educacion.id}}" *ngIf="isLogged" ></i>
+                                
+                                <i class="fa-solid fa-eraser" *ngIf="isLogged"(click)="delete(educacion.id)"></i>
+                                
+                            </div> 
+                           
+                        </p>
+                        
+                    </div>
+                    <div class="col-md-2 tex" id="container-exp" style="border: 2px solid rgba(255, 146, 52, 0.2); margin-left: 4%;">
+                        <img [src]="educacion.imagenE" id="foto-exp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
-        </div>
-        <div class="iconos-edicion">
-            <i class="fa-solid fa-pen" routerLink="/editar-edu/{{educacion.id}}" *ngIf="isLogged" ></i>
-            
-            <i class="fa-solid fa-eraser" *ngIf="isLogged"(click)="delete(educacion.id)"></i>
-            
-        </div>
-
-    </div> 
-
-
+    </div>
 </section>

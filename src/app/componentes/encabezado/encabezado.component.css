@@ -1,119 +1,60 @@
-header {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-image: url(../../../assets/fondoheader2.jpg);
-    background-size: cover;
-
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #ad77f800;
-    color: #ffffff;
-
-}
-
-.logocabecera {
-    width: 200px;
-}
-
-ul {
-    display: flex;
-    align-items: center;
-}
-
-ul li {
-    list-style-type: none;
-    margin: 10px;
-    font-size: 1.2em;
-    transition: .2s;
-}
-
-ul li:hover {
-    transform: scale(1.2);
-}
-
-.portada {
-
-    font-weight: 600;
-    text-shadow: #ffffff 0 6px 30px;
+.banner-image {
+    background-image: url("../assets/banner-img1.jpg");
     width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+  
+svg.image-filter {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+  
+.square {
+    z-index: 2;
     text-align: center;
-    margin: 0 auto;
-    position: relative;
-    top: 50px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 75px;
+    color: #FFFFFF;
+    /*border: 3px solid #c5c53b;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px;*/
+}
+  
+  
+.square > #titulo{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 37px;
+    margin-top: auto;
+}
+  
+  
+.navbar-nav{
+    align-items: flex-end;
+    margin:2%;
+}
+  
+.nav-item {
+    padding-left: 33px;
+}
+  
+  
+#logoArg {
+    max-height: 80px;
+   
+}
+  
+.email{
     color: white;
-    padding: 20px;
+    width: 30px;
 }
-
-.portada>h2 {
-    font-size: 3em;
-}
-
-nav i {
-    font-size: 1.3em;
-    transition: .2s;
-}
-
-i.iconoLogueo {
-    font-size: 1.5em;
-    margin: 0 10px;
-}
-
-i:hover {
-    color: #76a2df;
-    transform: scale(1.2);
-}
-
-
-@media (max-width: 750px) {
-    header {
-        min-height: 80vh;
-    }
-
-    .portada {
-        width: 80%;
-        font-size: .5em;
-    }
-
-    h2 {
-        font-size: 1.6em;
-    }
-
-    
-}
-
-@media (max-width: 500px) {
-    header {
-        min-height: 50vh;
-    }
-
-    h1 {
-
-        font-size: 3em;
-    }
-
-    .logocabecera {
-        display: none;
-    }
-
-
-    ul li:hover {
-        transform: none;
-    }
-
-    .iconoLogueo {
-        position: absolute;
-        top: 15px;
-        right: 10px;
-    }
-
-    .portada {
-        top: 25px;
-    }
-
-}
+  
